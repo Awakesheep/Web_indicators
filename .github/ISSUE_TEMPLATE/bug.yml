@@ -1,0 +1,25 @@
+name: Bug / incident
+description: Something broke or behaves wrongly
+labels: [bug]
+body:
+  - type: input
+    id: component
+    attributes: {label: Component, description: "which part of this project"}
+    validations: {required: true}
+  - type: textarea
+    id: actual
+    attributes: {label: What happened (actual), description: "Exact error text, screenshot, job/request id, time (UTC)"}
+    validations: {required: true}
+  - type: textarea
+    id: expected
+    attributes: {label: Expected}
+    validations: {required: true}
+  - type: textarea
+    id: repro
+    attributes: {label: Steps to reproduce, description: "Numbered steps, inputs used"}
+  - type: textarea
+    id: impact
+    attributes: {label: Impact, description: "Who/what is affected, how often, workaround"}
+  - type: textarea
+    id: evidence
+    attributes: {label: Evidence, description: "Log lines, measurements (no secrets)"}
